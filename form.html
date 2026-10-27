@@ -1,0 +1,128 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nour Academy</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/input.css">
+    <script src="/js/main.js" defer></script>
+    <script src="/js/data.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+
+<body>
+    <header>
+        <nav class=" lg:flex lg:justify-around">
+            <div><img src="/image/logo.webp" alt="Logo Nour Academy"></div>
+            <div id="My-side-nav ">
+
+
+
+                <ul class="flex flex-col items-center gap-[5px] pt-[30px] justify-center lg:flex-row lg:gap-5 ">
+                    <li> <a href="cart.html"><i id="cart-shoping" class="fa-solid fa-cart-shopping fa-xl"
+                                style="color: rgb(252, 116, 116);"></i></a>
+                    </li>
+                    <li><a class="lg:text-xl" href="index.html">Accueil</a></li>
+                    <li><a class="lg:text-xl" href="#cours">Nos cours</a></li>
+
+                    <li><a class="lg:text-xl" href="#Nos-centre">Nos centres</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <br>
+    <main onload="getcartitems()">
+        <form id="contactForm" class="w-[90%] lg:w-[60%] mx-auto mt-10 flex flex-col gap-6
+            border-2 border-solid border-black rounded-xl p-5">
+
+            <div class="flex flex-col gap-2">
+                <label for="name">First name:</label>
+                <input id="name" class="h-10 border border-gray-400 rounded-lg px-3" type="text" id="name" placeholder="Enter Your Name">
+                <span id="first-name"></span>
+
+                <label for="last">Last name:</label>
+                <input id="lastname" class="h-10 border border-gray-400 rounded-lg px-3" type="text" id="last" placeholder="Enter Your Last Name">
+                <span id="last-name"></span>
+
+
+
+                <label for=" num ">Phone Number:</label>
+                <input id="phone" class="h-10 border border-gray-400 rounded-lg px-3 " type="tel " id="num " placeholder="06 16 17 34 54 ">
+                <span id="Phone-number"></span>
+
+
+                <label for="email ">Email:</label>
+                <input id="email" class="h-10 border border-gray-400 rounded-lg px-3 " type="email " id="email " placeholder="Enter Your Email ">
+                <span id="mail"></span>
+
+
+                <label for="password ">Password:</label>
+                <input id="Password" class="h-10 border border-gray-400 rounded-lg px-3 " type="password " id="password " placeholder="Enter Your Password ">
+                <span id="spassword"></span>
+
+
+
+            </div>
+
+
+            <div class="flex flex-col gap-2 ">
+                <label for="studentName">Student First Name:</label>
+                <input id="name-student" class="h-10 border border-gray-400 rounded-lg px-3 " type="text " id="studentName " placeholder="Enter Student Name ">
+                <span id="first-studentName"></span>
+
+
+
+                <label for="studentLast ">Student Last Name:</label>
+                <input id="last-student" class="h-10 border border-gray-400 rounded-lg px-3 " type="text " id="studentLast " placeholder="Enter Student Last Name ">
+                <span id="studentLast"></span>
+
+
+            </div>
+
+
+            <button id="btn" class=" bg-[#2563EB] text-white rounded-xl ">send</button>
+
+
+
+        </form>
+
+    </main>
+
+    <footer class=" mt-7 flex flex-col justify-center items-center lg:flex-row lg:justify-around ">
+        <div>
+            <img src="image/logo.webp " alt=" " width="200px ">
+            <pre class="ml-3 ">Soutien scolaire et langues à Nador.
+Un parcours simple pour choisir
+ les cours de votre enfant.</pre>
+        </div>
+        <div class=" ">
+            <h3 class=" ml-3.5 mt-4 text-2xl font-bold ">Explorer</h3>
+            <div id="My-side-nav " class="flex justify-center ">
+
+                <ul>
+                    <li><a href=" ">Accueil</a></li>
+                    <li><a href=" ">Nos cours</a></li>
+                    <li><a href=" ">Nos centres</a></li>
+                    <li><a href=" ">Contact</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <pre class="text-xl ml-4 ">© 2026 Nour Academy
+ Maquette de présentation</pre>
+    </footer>
+
+
+
+</body>

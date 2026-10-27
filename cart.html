@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nour Academy</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/input.css">
+    <script src="/js/data.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+
+<body onload="getcartitems()">
+    <header>
+        <nav class=" lg:flex lg:justify-around">
+            <div><img src="/image/logo.webp" alt="Logo Nour Academy"></div>
+            <div id="My-side-nav ">
+
+
+
+                <ul class="flex flex-col items-center gap-[5px] pt-[30px] justify-center lg:flex-row lg:gap-5 ">
+
+                    <li><a class="lg:text-xl" href="index.html">Accueil</a></li>
+                    <li><a class="lg:text-xl" href="#cours">Nos cours</a></li>
+
+                    <li><a class="lg:text-xl" href="#Nos-centre">Nos centres</a></li>
+
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <br>
+    <br>
+
+    <main class="flex ">
+
+        <section id="items" class="flex flex-row lg:w-[80%] flex-wrap ">
+            <div id="cart-cours" class="itemsss ">
+            </div>
+        </section>
+        <div class=" lg:w-[20%] lg:h-[150px] lg:border-solid lg:border-[2px] lg:border-b-black mt-5 mr-7 lg:flex lg:flex-col lg:items-center ">
+            <h2 class="text-blue-900 text-2xl text-center mt-2 font-bold">Votre facture</h2>
+            <a href="form.html" id="facture"  class="mt-10 lg:w-[80%] lg:h-[40%] pt-4 bg-green-800 rounded-2xl text-center  "></a>
+
+            
+        </div>
+
+    </main>
+
+
+    <br>
+    <br>
+    <footer class="mt-7 flex flex-col justify-center items-center lg:flex-row lg:justify-around">
+        <div>
+            <img src="image/logo.webp " alt="" width="200px ">
+            <pre class="ml-3">Soutien scolaire et langues à Nador.
+Un parcours simple pour choisir
+ les cours de votre enfant.</pre>
+        </div>
+        <div class="">
+            <h3 class=" ml-3.5 mt-4 text-2xl font-bold">Explorer</h3>
+            <div id="My-side-nav" class="flex justify-center ">
+
+                <ul>
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">Nos cours</a></li>
+                    <li><a href="">Nos centres</a></li>
+                    <li><a href="">Contact</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <pre class="text-xl ml-4">© 2026 Nour Academy
+ Maquette de présentation</pre>
+    </footer>
+
+
+</body>
+
+</html>
