@@ -47,3 +47,11 @@ export function updateInscription(id, changes) {
   saveInscriptions(inscriptions);
   return inscriptions.find((i) => i.id === id);
 }
+export function removeInscription(id) {
+  const supprimee = inscriptions.find((i) => i.id === id);
+  if (!supprimee) return null;
+
+  inscriptions = inscriptions.filter((i) => i.id !== id);
+  saveInscriptions(inscriptions);
+  return supprimee;
+}
