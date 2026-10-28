@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nour Academy — Secrétariat</title>
+  <link rel="stylesheet" href="/css/input.css">
+  <script type="module" src="/js/app.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+  <header class="bg-blue-800 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <p class="text-lg font-bold">Nour Academy · Secrétariat</p>
+      <nav aria-label="Menu principal">
+        <ul class="flex flex-wrap gap-2">
+          <li><button type="button" data-view="inscriptions" class="px-4 py-2 rounded-lg hover:bg-blue-700 aria-[current=page]:bg-white aria-[current=page]:text-blue-800">Inscriptions</button></li>
+          <li><button type="button" data-view="ajout" class="px-4 py-2 rounded-lg hover:bg-blue-700 aria-[current=page]:bg-white aria-[current=page]:text-blue-800">Nouvelle inscription</button></li>
+          <li><button type="button" data-view="tableau-de-bord" class="px-4 py-2 rounded-lg hover:bg-blue-700 aria-[current=page]:bg-white aria-[current=page]:text-blue-800">Tableau de bord</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-6">
+    <section data-view-panel="inscriptions">
+      <h1 class="text-2xl font-bold mb-4">Inscriptions</h1>
+      <p class="text-slate-500">La liste des inscriptions sera affichée ici.</p>
+    </section>
+
+    <section data-view-panel="ajout" hidden>
+      <h1 class="text-2xl font-bold mb-4">Nouvelle inscription</h1>
+    </section>
+
+    <section data-view-panel="tableau-de-bord" hidden>
+      <h1 class="text-2xl font-bold mb-4">Tableau de bord</h1>
+    </section>
+  </main>
+</body>
+</html>
