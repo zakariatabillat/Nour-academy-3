@@ -27,8 +27,49 @@
       <p class="text-slate-500">La liste des inscriptions sera affichée ici.</p>
     </section>
 
-    <section data-view-panel="ajout" hidden>
+       <section data-view-panel="ajout" hidden>
       <h1 class="text-2xl font-bold mb-4">Nouvelle inscription</h1>
+
+      <form id="form-inscription" novalidate class="bg-white rounded-xl border border-slate-200 p-6 max-w-2xl grid gap-5">
+        <div class="grid gap-1">
+          <label for="champ-nom" class="font-medium">Nom complet de l'élève</label>
+          <input id="champ-nom" name="nom" type="text" autocomplete="off"
+                 class="h-11 border border-slate-300 rounded-lg px-3" aria-describedby="erreur-nom">
+          <p id="erreur-nom" class="text-sm text-red-700" aria-live="polite"></p>
+        </div>
+
+        <div class="grid gap-1">
+          <label for="champ-telephone" class="font-medium">Téléphone du parent</label>
+          <input id="champ-telephone" name="telephoneParent" type="tel" placeholder="06 12 34 56 78"
+                 class="h-11 border border-slate-300 rounded-lg px-3" aria-describedby="erreur-telephone">
+          <p id="erreur-telephone" class="text-sm text-red-700" aria-live="polite"></p>
+        </div>
+
+        <div class="grid gap-1">
+          <label for="champ-cours" class="font-medium">Cours</label>
+          <select id="champ-cours" name="courseId"
+                  class="h-11 border border-slate-300 rounded-lg px-3 bg-white" aria-describedby="erreur-cours">
+            <option value="">Choisir un cours</option>
+          </select>
+          <p id="erreur-cours" class="text-sm text-red-700" aria-live="polite"></p>
+        </div>
+
+        <div class="grid gap-1">
+          <label for="champ-statut" class="font-medium">Statut</label>
+          <select id="champ-statut" name="statut" class="h-11 border border-slate-300 rounded-lg px-3 bg-white">
+            <option value="En attente">En attente</option>
+            <option value="Validée">Validée</option>
+            <option value="Payée">Payée</option>
+          </select>
+        </div>
+
+        <p id="message-formulaire" role="status" class="text-sm"></p>
+
+        <div class="flex gap-3">
+          <button type="submit" class="bg-blue-700 text-white px-5 py-2.5 rounded-lg hover:bg-blue-800">Enregistrer</button>
+          <button type="reset" class="border border-slate-300 px-5 py-2.5 rounded-lg hover:bg-slate-100">Annuler</button>
+        </div>
+      </form>
     </section>
 
     <section data-view-panel="tableau-de-bord" hidden>
