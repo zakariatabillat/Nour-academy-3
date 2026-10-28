@@ -34,3 +34,16 @@ export function addInscription(data) {
   saveInscriptions(inscriptions);
   return nouvelle;
 }
+export function updateInscription(id, changes) {
+  const existe = inscriptions.some((i) => i.id === id);
+  if (!existe) return null;
+
+  // id, numéro de dossier et date ne se modifient jamais
+  const { id: _id, numeroDossier: _num, dateInscription: _date, ...autorisees } = changes;
+
+  inscriptions = inscriptions.map((i) =>
+    i.id === id ? { ...i, ...autorisees } : i
+  );
+  saveInscriptions(inscriptions);
+  return inscriptions.find((i) => i.id === id);
+}
