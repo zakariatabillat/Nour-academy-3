@@ -176,7 +176,7 @@ let arr = []
 function addToPanier(id, ele) {
     arr.push(id)
     localStorage.setItem("user-cart", JSON.stringify(arr))
-    let items = (JSON.parse(localStorage.getItem("user-cart")));
+    let items = JSON.parse(localStorage.getItem("user-cart")) || [];
     localStorage.setItem("cart-shoping", items.length)
 
     document.getElementById("cart-shoping").innerHTML = items.length
@@ -187,7 +187,7 @@ let data = courses
 
 function getcartitems() {
     let chose = []
-    let items = (JSON.parse(localStorage.getItem("user-cart")));
+    let items = JSON.parse(localStorage.getItem("user-cart")) || [];
     for (let i = 0; i < items.length; i++) {
         chose.push(data.find((data) => data.id == items[i]))
 
@@ -229,7 +229,7 @@ function totalAfterdelet(items) {
 function removeitems(id) {
     let total = 0
     let chose = []
-    let items = (JSON.parse(localStorage.getItem("user-cart")));
+    let items = JSON.parse(localStorage.getItem("user-cart")) || [];
     for (let i = 0; i < items.length; i++) {
         for (let j = 0; j < data.length; j++) {
             if (items[i] == data[j].id) {
@@ -301,5 +301,8 @@ function addcartTopagecart(items) {
 
     itemsss.innerHTML = showInHtml
 }
-renderCourses();
-listenData();
+// Le catalogue et ses filtres n'existent que sur la page d'accueil
+if (nev && matiere && center) {
+    renderCourses();
+    listenData();
+}
