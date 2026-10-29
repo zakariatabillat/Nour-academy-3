@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/input.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/students.js" defer></script>
+     <script type="module" src="/js/director-page.js"></script>
+    <link rel="icon" type="image/webp" href="/image/logo.webp">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
@@ -40,11 +42,19 @@
                 <p class="font-bold text-xl text-white">En attente</p>
             </div>
 
+            <button type="button" id="btn-tableau-de-bord"
+                class="flex mt-10 gap-3 bg-blue-800 h-20 w-full items-center border border-blue-700 rounded-xl px-3 text-left">
+                <i class="fa-solid fa-chart-line fa-xl" style="color:#93c5fd;"></i>
+                <p class="font-bold text-xl text-white">Tableau de bord</p>
+            </button>
+
         </section>
 
         <section id="students-list" class="ml-70">
 
         </section>
+
+        <section id="tableau-de-bord" class="ml-70 flex-1 p-6 hidden"></section>
 
         <section id="edit-form"
             class=" hidden fixed inset-0 z-50 bg-slate-900/40 flex items-start justify-center overflow-y-auto p-4">
