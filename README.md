@@ -41,8 +41,7 @@ Le code est découpé en modules ES par responsabilité :
 
 | Membre | Travail réalisé |
 |---|---|
-| Taha Harbouch | Nettoyage du dépôt, modules de données (stockage, état, cours, validation, règles), tableau de bord du directeur (US6), réinitialisation des données de démo |
-| [nom du coéquipier] | À compléter |
+| Zakaria Tabillat | Nettoyage du dépôt, modules de données (stockage, état, cours, validation, règles), tableau de bord du directeur (US6), réinitialisation des données de démo |
 
 ## Données personnelles (loi 09-08)
 
