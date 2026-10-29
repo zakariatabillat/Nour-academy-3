@@ -2,9 +2,9 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 import { cpSync } from "node:fs";
 
-export default defineConfig(({ command }) => ({
+export default defineConfig(({ mode }) => ({
   // En ligne, le site est dans le sous-dossier /Nour-academy-3/ ; en local, à la racine
-  base: command === "build" ? "/Nour-academy-3/" : "/",
+  base: mode === "production" ? "/Nour-academy-3/" : "/",
   plugins: [
     tailwindcss(),
     {
