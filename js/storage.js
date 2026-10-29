@@ -1,5 +1,4 @@
-const STORAGE_KEY = "nour-inscriptions";
-
+const STORAGE_KEY = "eleve";
 export function loadInscriptions() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
