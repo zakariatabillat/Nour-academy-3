@@ -65,3 +65,6 @@ export function removeInscription(id) {
   commit(inscriptions.filter((i) => i.id !== id));
   return supprimee;
 }
+export function resetDemo() {
+  commit([...seedInscriptions]);
+}
