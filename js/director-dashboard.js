@@ -1,4 +1,4 @@
-import { getInscriptions } from "./state.js";
+import { getInscriptions, onChange } from "./state.js";
 import { calculerStats, formaterMAD } from "./stats.js";
 import { CAPACITE_MAX } from "./rules.js";
 
@@ -73,4 +73,8 @@ export function renderDashboard(container) {
         <tbody>${lignes}</tbody>
       </table>
     </div>`;
+}
+export function initDashboard(container) {
+  renderDashboard(container);
+  onChange(() => renderDashboard(container));
 }
