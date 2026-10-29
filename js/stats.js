@@ -1,6 +1,12 @@
 import { courses } from "./courses.js";
 import { CAPACITE_MAX } from "./rules.js";
 
+// Le cours d'une inscription = même matière, même niveau, même centre
+const estDuCours = (inscription, cours) =>
+  inscription.matiere === cours.matiere &&
+  inscription.niveau === cours.niveau &&
+  inscription.centre === cours.centre;
+
 export function calculerStats(inscriptions) {
   const total = inscriptions.length;
 
@@ -13,12 +19,12 @@ export function calculerStats(inscriptions) {
   // Recettes encaissées : uniquement les inscriptions payées
   const recettes = inscriptions
     .filter((i) => i.statut === "Payée")
-    .reduce((somme, i) => somme + i.prix, 0);
+    .reduce((somme, i) => somme + Number(i.prix), 0);
 
   // Taux de remplissage des cours qui ont au moins un élève, du plus rempli au moins rempli
   const remplissage = courses
     .map((c) => {
-      const inscrits = inscriptions.filter((i) => i.courseId === c.id).length;
+      const inscrits = inscriptions.filter((i) => estDuCours(i, c)).length;
       return { ...c, inscrits, taux: Math.round((inscrits / CAPACITE_MAX) * 100) };
     })
     .filter((c) => c.inscrits > 0)
