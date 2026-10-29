@@ -5,7 +5,9 @@ Tout fonctionne dans le navigateur (aucun serveur) : les données sont enregistr
 
 ## Lien de l'application
 
-À compléter après le déploiement.
+https://zakariatabillat.github.io/Nour-academy-3/
+
+Le site est redéployé automatiquement sur GitHub Pages à chaque push sur `main` (voir `.github/workflows/deploy.yml`).
 
 ## Installation
 
